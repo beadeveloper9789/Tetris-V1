@@ -14,7 +14,7 @@ pipeline{
         stage('Terraform init'){
              steps{
                  dir('Eks-terraform') {
-                      sh 'terraform init -reconfigure'
+                      sh ' terraform init -migrate-state'
                    }      
              }
         }
