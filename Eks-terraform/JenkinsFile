@@ -21,7 +21,7 @@ pipeline{
         stage('Terraform validate'){
              steps{
                  dir('Eks-terraform') {
-                      sh 'terraform validate'
+                      sh 'terraform validate -out'
                    }      
              }
         }
